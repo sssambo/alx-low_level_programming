@@ -3,9 +3,10 @@
  * @int a: pointer
  * @int b: pointer
  * dereferencing and swap
+ * no return
  */
 
-void swap_init(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int tmp;
 
