@@ -1,9 +1,9 @@
 /**
- * set that to always 98
- * @n: parameter
+ *  reset_to_98 - any passed value is set to 98
  *
+ *  @n: int parameter
  *
- * return nothing
+ *  Return: nothing
  */
 
 void reset_to_98(int *n)
