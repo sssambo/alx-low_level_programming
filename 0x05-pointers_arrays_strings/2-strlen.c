@@ -1,19 +1,17 @@
-#include <string.h>
 /**
- * _strlen - counts the total length of passed
- *		argument
+ * _strlen - returns the length of a string
  *
- * @s: char pointer
+ * @s: string parameter input
  *
- * Return: len
- */
+ * Return: length of string
+*/
 
 int _strlen(char *s)
 {
-	int len;
+	int counter;
 
-	len = strlen(*s);
+	for (counter = 0; *s != '\0'; ++s)
+		++counter;
 
-	return (len);
-
+	return (counter);
 }
