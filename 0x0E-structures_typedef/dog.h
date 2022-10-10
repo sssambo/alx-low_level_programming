@@ -1,13 +1,19 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
- *struct  dog - class dog 
- *
- * @name: char * 
+ * struct dog - class dog with variables
+ * @name: char *
  * @age: float
- * owner: char *
+ * @owner: char *
+ *
+ * Description: - No log description
  */
 struct dog
 {
 	char *name;
 	float age;
-	char *owner
-}
+	char *owner;
+};
+
+#endif /* struct dog */
