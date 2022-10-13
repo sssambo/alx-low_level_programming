@@ -1,3 +1,4 @@
+#include <stdarg.h>
 /**
  * sum_them_all - function to print all the specified arguments
  * @n: int specifier
