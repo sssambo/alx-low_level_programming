@@ -8,13 +8,13 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list list;
-	int counter;
+	int count;
 	int accum;
 
 	if (n == 0)
 	return (0);
 
-	counter = n;
+	count = n;
 	accum = 0;
 	va_start(list, n);
 	while (count != 0)
