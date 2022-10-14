@@ -1,5 +1,6 @@
-#include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
+
 /**
  * print_strings - function to receice strings and print them
  * @separator: character type
@@ -14,17 +15,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *strg;
 
 	va_start(lists, n);
+
 	for (number = 0; number <= n; number++)
 	{
-	strg = va_arg(lists, char *);
-	if (strg)
-		printf("%s", strg);
-	else
-		printf("(nil)");
+		strg = va_arg(lists, char *);
+		if (strg)
+			printf("%s", strg);
+		else
+			printf("(nil)");
 
-	if (separator && number != n - 1)
-		printf("%s", separator);
+		if (separator && number != n - 1)
+			printf("%s", separator);
 	}
-	va_end(lists);
-	printf("\n");
+		va_end(lists);
+		printf("\n");
 }
