@@ -1,32 +1,36 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
- * print_strings - function to receice strings and print them
- * @separator: character type
- * @n: int number of arguments
+ * print_strings - a function that prints strings, followed by a new line
  *
- * Return : Nothing
- */
+ * @separator: pointer to a constant separator
+ * @n: start of input variables
+ *
+ * Return: nothing
+*/
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int number;
-	va_list lists;
-	char *strg;
+	va_list ap;
+	unsigned int index;
+	char *str;
 
-	va_start(lists, n);
+	/* iterate the argument list from the start */
+	va_start(ap, n);
 
-	for (number = 0; number <= n; number++)
+	for (index = 0; index < n; index++)
 	{
-		strg = va_arg(lists, char *);
-		if (strg)
-			printf("%s", strg);
+		str = va_arg(ap, char *);
+		if (str)
+			printf("%s", str);
 		else
 			printf("(nil)");
 
-		if (separator && number != n - 1)
+		if (separator && index != n - 1)
 			printf("%s", separator);
 	}
-		va_end(lists);
-		printf("\n");
+	/*clean up*/
+	va_end(ap);
+	printf("\n");
 }
