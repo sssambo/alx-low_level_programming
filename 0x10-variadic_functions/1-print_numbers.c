@@ -9,16 +9,14 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list lip;
-	int cass;
 	unsigned int num;
+	int cass;
 
-	num = n;
 	va_start(lip, n);
-	while (num != 0)
+	for (num = 0; num < n; num++)
 	{
 	cass = va_arg(lip, int);
-	printf("%d,", cass);
-	num--;
+	printf("%d", cass);
 	if (separator && num != n - 1)
 		printf("%s", separator);
 
