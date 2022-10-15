@@ -7,13 +7,14 @@
  */
 void print_rev(char *s)
 {
-        int size = 0;
+	int size;
 
-        while (s[size] != '\0')
-            size++;
-        while(size >= 0)
-        {
-            putc(s[size], stdout);
-            size--;
-        }
+	size = 0;
+	while (s[size] != '\0')
+	size++;
+	while (size >= 0)
+	{
+		putc(s[size], stdout);
+		size--;
+	}
 }
