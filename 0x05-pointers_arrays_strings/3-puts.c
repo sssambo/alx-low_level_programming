@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _puts - function to print a string followed by new line \n
  *
@@ -8,5 +9,13 @@
 
 void _puts(char *str)
 {
-	puts(*str);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		putc(str[i], stdout);
+		i++;
+	}
+	putc('\n', stdout);
 }
