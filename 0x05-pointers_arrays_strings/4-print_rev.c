@@ -1,20 +1,23 @@
-#include "main.h"
+#include"main.h"
+
 /**
- * print_rev - reverse string in stdout
- * @s: char pointer
+ * print_rev - prints a string in reverse
  *
- * Return: void through
- */
+ * @s: string parameter input
+ *
+ * Return: Nothing
+*/
+
 void print_rev(char *s)
 {
-	int size;
+	int index;
 
-	size = 0;
-	while (s[size] != '\0')
-	size++;
-	while (size >= 0)
-	{
-		putc(s[size], stdout);
-		size--;
-	}
+	/*finds the length of string without null character*/
+	for (index = 0; s[index] != '\0'; ++index)
+		;
+
+	/*print char from the last index as you decrement*/
+	for (--index; index >= 0; --index)
+		_putchar(s[index]);
+	_putchar('\n');
 }
